@@ -1,0 +1,6 @@
+{
+  "name": "Quản lí lớp học thân thiện",
+  "description": "Hệ thống quản lí lớp học thân thiện, tiện dụng với quản lý học sinh, điểm danh 1-chạm, bảng xếp hạng vinh danh, tiêu chí thi đua, gọi tên may mắn, đổi quà, đo tiếng ồn, đồng hồ đếm ngược và thời khóa biểu.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

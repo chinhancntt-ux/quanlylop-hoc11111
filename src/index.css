@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide all UI elements with no-print */
+  .no-print,
+  .no-print * {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Hide sidebars, navigation, modals backdrop */
+  aside,
+  nav,
+  header {
+    display: none !important;
+  }
+
+  /* Ensure the printable honor board is visible and cleanly positioned */
+  #printable-honor-board {
+    display: block !important;
+    visibility: visible !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 6mm !important;
+    background: #ffffff !important;
+    z-index: 99999999 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  #printable-honor-board * {
+    visibility: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Maintain table layout in print */
+  #printable-honor-board table {
+    display: table !important;
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  #printable-honor-board thead {
+    display: table-header-group !important;
+  }
+
+  #printable-honor-board tbody {
+    display: table-row-group !important;
+  }
+
+  #printable-honor-board tr {
+    display: table-row !important;
+    page-break-inside: avoid !important;
+  }
+
+  #printable-honor-board th,
+  #printable-honor-board td {
+    display: table-cell !important;
+  }
+}
